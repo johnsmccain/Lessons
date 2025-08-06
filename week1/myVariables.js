@@ -54,9 +54,14 @@ const Person = {
     name: "Boma",
     age: 25,
     isAGirl: true,
-    hobbies: ["Dancing", "Reading"]
+    hobbies: ["Dancing", "Reading"],
+    myFunc: function() {
+        
+    }
 }
 console.log(Person["isAGirl"])
+console.log(Person.name)
+console.log(Person.myFunc())
 
 // Person.age = 27
 // console.log(Person)
