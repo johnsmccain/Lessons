@@ -24,8 +24,13 @@ Use conditional statements to determine letter grades.
 
 const studentList = [
     {name:"Boma", score: 75},
-    {name: "John", score: 76},
-    {name: "Nora", score: 77}
+    {name: "John", score: 69},
+    {name: "Nora", score: 87},
+    {name: "Adam", score: 97},
+    {name: "Eve", score: 60},
+    {name: "Jonathan", score: 50},
+    {name: "Adamu", score: 70},
+    {name: "Bam", score: 90},
 ]
 
 function calculateGrade(score){
@@ -42,6 +47,30 @@ function calculateGrade(score){
     }
 }
 
-
+// Example 1
+// function aggregateStudentScores(students){
+//     let lastStudent = students.length -1;
+//     let student = students[lastStudent];
+//     let name = student.name;
+//     let score = student.score;
+//     console.log(name)
+//     console.log(score)
+//     let grade = calculateGrade(score)
+//     console.log(grade)
+//     console.log(students.length)
+// }
 
 // aggregateStudentScores(studentList)
+
+function aggregateStudentScores(students){
+    for(let i = 0; i < students.length; i++){
+        let currentStudent = i;
+        let student = students[currentStudent];
+        let name = student.name;
+        let score = student.score;
+        let grade = calculateGrade(score)
+        console.log(`Name: ${name}, Score: ${score}, Grade: ${grade}`)
+    }
+}
+
+aggregateStudentScores(studentList)
